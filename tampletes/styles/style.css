@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    font-family: "Roboto", sans-serif;
+}
+.corpo{
+    background: #2a0e6983;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container{
+    background: #b4cac183;
+    padding: 0.7em;
+    border-radius: 1.5em;
+    border: #020a0783 solid 3px;
+    width: 50vh;
+    position: relative;
+    box-shadow: 5px 20px 50px rgb(16, 19, 31);
+    
+}
+.container .song-info{
+    background-color: #080808fd;
+    margin: 2em 1em 0;
+    padding: 15px 15px 0 0;
+    border-radius: 0.6em 0.6em 0 0;
+
+}
+.container .song-info .song-name{
+    color: #b9b9b9;
+    font-size: 1.1em;
+    margin: 0.25em 0 1em 1em;
+}
+.container .song-info .artist-name{
+    color: #fff;
+    font-weight: bolder;
+    font-size: 1.2em;
+    margin: 0 0 0 1em;
+}
+.container .song-info .progress-bar{
+    background-color: #505050;
+    border-radius: 1em;
+    margin: 0 9em 0 1em;
+    cursor: pointer;
+}
+.container .song-info .progress-bar .fill-bar{
+    width: 0;
+    height: 0.5em;
+    border-radius: 1em;
+    background: #1e0d7a83;
+}
+.container .song-info .time{
+    color: #505050;
+    margin: 0.5em 0em 0.5em 1em;
+}
+
+.container .disk{
+    max-width: 120px;
+}
+.container .disk .active{
+    animation: rotate 3s linear 0s infinite forwards;
+}
+.container .disk .cover{
+    width: 145px;
+    height: 145px;
+    position: absolute;
+    top: 14px;
+    left: 145px;
+    background-repeat: no-repeat;
+    background: url("/tampletes/assets/3.jpg");
+    background-position: bottom center;
+    background-size: cover;
+    border: #fff solid 3px;
+    border-radius: 50%;
+    box-shadow: 5px 2px 30px rgb(59, 91, 197);
+    transition: all 0.2s ease-in-out;
+}
+.container .disk .circle{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 65%;
+    top: 33%;
+    border-radius: 50%;
+    border: solid 1px #746f6f;
+    background-color: #fff;
+    z-index: 1;
+}
+.controls{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 40px;
+    font-size: 1.5em;
+    height: 40px;
+    background: #505050;
+    width: 295px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgb(16, 19, 31);
+ }
+ #play{
+    color: #fff;
+
+}
+#prev:hover ,#next:hover{
+    color: rgb(59, 91, 197);
+    font-size: 2em;
+}
+#play:hover{
+    color: rgb(88, 136, 34);
+    font-size: 2em;
+ 
+}
+@keyframes rotate{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
